@@ -1,0 +1,47 @@
+# Bulgarian HIS (Healthcare Information System) API Documentation
+
+API_Addresses:
+Main_Production_API: "https://api.his.bg"
+Test_Environment_API: "https://ptestapi.his.bg"
+
+Authorization:
+Description: "To interact with the endpoints, a Bearer token is required for authorization."
+Obtaining_Token:
+Description: "Make a GET request to the auth endpoints."
+Endpoints:
+Production: "https://auth.his.bg"
+Test: "https://ptest-auth.his.bg"
+Signature_Requirement: "The request must be signed with a valid electronic signature."
+Schema_Information:
+XSD_Schema: "https://www.w3.org/TR/xmldsig-core/"
+Schema_Location: "http://www.w3.org/2000/09/xmldsig#"
+Successful_Authentication_Response: |
+<?xml version="1.1" encoding="UTF-8"?>
+<nhis:message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:nhis="https://www.his.bg" xsi:schemaLocation="https://www.his.bg
+https://www.his.bg/api/v1/NHIS-S001.xsd">
+<nhis:contents>
+<nhis:accessToken value="imSXTs2OqSrGWzsF3rF..." dataType="[string]"/>
+<nhis:tokenType value="bearer" dataType="[string]"/>
+<nhis:expiresIn value="7200" dataType="[positiveInt]"/>
+<nhis:issuedOn value="2020-10-21T18:11:23" dataType="[dateTime]"/>
+<nhis:expiresOn value="2020-10-21T18:13:23" dataType="[dateTime]"/>
+</nhis:contents>
+</nhis:message>
+Token_Usage: "Use the received token in the headers of subsequent requests: 'Authorization: Bearer imSXTs2OqSrGWzsF3rF...'"
+Alternative_Authorization_Method:
+Description: "If a client certificate is not included, a 401 (Unauthorized) response is received."
+Challenge_Message: |
+<?xml version="1.1" encoding="UTF-8"?>
+<nhis:message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:nhis="https://www.his.bg" xsi:schemaLocation="https://www.his.bg
+https://www.his.bg/api/v1/NHIS-S001.xsd">
+<nhis:contents>
+<nhis: challenge value="imSXTs2OqSrGWzsF3rF..." dataType="[string]"/>
+</nhis:contents>
+</nhis:message>
+
+Endpoints:
+Description: "Endpoints of the HIS"
+Swagger_Documentation: "https://ptest-api.his.bg/index.html"
+Required_Functionalities: "Focus on functionalities listed under the EExamination section."

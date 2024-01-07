@@ -1,1 +1,0 @@
-# Bulgarian-HIS-English-Documentation
