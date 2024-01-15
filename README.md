@@ -51,7 +51,7 @@ https://www.his.bg/api/v1/NHIS-S001.xsd">
 ### Swagger Documentation
 Access the Swagger documentation for a detailed list of functionalities: [HIS API Documentation](https://ptest-api.his.bg/index.html)
   
-### Detailed description of the API endpoints and the corresponding rules and business logic can be found in the XCEL files provided in this repo.
+### Detailed description of the API endpoints and the corresponding rules and business logic can be found in the XLSX files provided in this repo.
 - Every call should be digitally signed by the same entity that obtained the authorization token - with the same certificate
 - An example of a call X001 request headers and body looks like this:
 ```xml
