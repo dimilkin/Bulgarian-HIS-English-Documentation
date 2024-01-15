@@ -1,6 +1,7 @@
 # Bulgarian HIS (Healthcare Information System) API Documentation
 
 ## API Addresses
+- **Home website of the NHIS System:** `https://his.bg/bg/dev/specifications`
 - **Main Production API address:** `https://api.his.bg`
 - **Test Environment API address:** `https://ptestapi.his.bg`
 
